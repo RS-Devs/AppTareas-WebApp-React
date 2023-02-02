@@ -10,8 +10,8 @@ const ToDoList = () => {
     error: false,
     message: "",
   });
-  const [filter, setFilter] = useState("all"); // Nuevo estado para el filtro
-
+  const [filter, setFilter] = useState("all"); 
+  
   const [editingTodo, setEditingTodo] = useState(null);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const ToDoList = () => {
       <div>
         <nav className="navbar">
           <h1 className="tit">
-            To do list <span>React</span>
+            App de Tareas <span>React</span>
           </h1>
           <h5 className="sub-tit">
             Created<span className="sub-tit-two"> by </span>
