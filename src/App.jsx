@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { addTodo, deleteTodo,  } from "./services/todo-list-functions";
+import { addTodo, deleteTodo } from "./services/todo-list-functions";
 import { validateInput, validateMaxInput } from "./services/validation";
 import "./App.css";
 
@@ -10,8 +10,8 @@ const ToDoList = () => {
     error: false,
     message: "",
   });
-  const [filter, setFilter] = useState("all"); 
-  
+  const [filter, setFilter] = useState("all"); // Nuevo estado para el filtro
+
   const [editingTodo, setEditingTodo] = useState(null);
 
   useEffect(() => {
@@ -41,7 +41,8 @@ const ToDoList = () => {
       });
       return;
     }
-    const { error: errorMax, message: messageMax } = validateMaxInput(inputValue);
+    const { error: errorMax, message: messageMax } =
+      validateMaxInput(inputValue);
     if (errorMax) {
       setError({
         error: true,
@@ -56,8 +57,6 @@ const ToDoList = () => {
     addTodo(todos, setTodos, inputValue);
     setInputValue("");
   };
-  
-
 
   const handleToggle = (todoId) => {
     const newTodos = todos.map((todo) => {
@@ -71,8 +70,7 @@ const ToDoList = () => {
     });
     setTodos(newTodos);
   };
-  
-  
+
   const handleFilter = (e) => {
     setFilter(e.target.value);
   };
@@ -87,13 +85,10 @@ const ToDoList = () => {
     }
   });
 
-
   const showDeleteButton = () => {
-    const completedTodos = todos.filter(todo => todo.completed);
+    const completedTodos = todos.filter((todo) => todo.completed);
     return completedTodos.length > 0;
-  }
-
-
+  };
 
   const handleDeleteCompleted = () => {
     const newTodos = todos.filter((todo) => !todo.completed);
@@ -103,9 +98,6 @@ const ToDoList = () => {
   const handleDeleteAll = () => {
     setTodos([]);
   };
-
-
-
 
   return (
     <>
@@ -177,12 +169,18 @@ const ToDoList = () => {
               >
                 Eliminar
               </button>
-             
             </div>
           ))}
-{showDeleteButton() && <button type="button" className="delete-completed" onClick={handleDeleteCompleted}>Eliminar tareas completadas</button>}
+          {showDeleteButton() && (
+            <button
+              type="button"
+              className="delete-completed"
+              onClick={handleDeleteCompleted}
+            >
+              Eliminar tareas completadas
+            </button>
+          )}
 
-          
           {todos.length > 1 && (
             <button
               type="button"
@@ -194,7 +192,6 @@ const ToDoList = () => {
           )}
         </div>
       </div>
-      
     </>
   );
 };
