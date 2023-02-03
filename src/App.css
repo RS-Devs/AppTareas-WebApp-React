@@ -4,7 +4,6 @@
   padding: 2rem;
   text-align: center;
   margin-top: 3rem;
-  overflow-x: hidden;
 }
 
 .todo-list {
@@ -295,18 +294,30 @@ h2 {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 320px){
+
+  #root {
+    overflow-x: hidden;
+  }
+
   .todo-list {
     width: 75%;
+    overflow-x: hidden;
+    
+  }
+
+  .filters{
+    overflow-x: hidden;
+
   }
 
   input[type="text"] {
-    width: 80%;
+    width: 100%;
+    
   }
 
   .tit {
     width: 100%;
-    font-size: 29.7px;
-    padding: 10px;
+    font-size: 25.5px;
   }
 
   .delete-all{
@@ -319,7 +330,20 @@ h2 {
   
 }
 
+@media only screen and (max-height:740px) {
+  .tit {
+    width: 100%;
+    font-size: 29.5px;
+    margin-bottom: 2rem;
+  }
+}
 
+@media only screen and (min-height: 470px){
+  .tit {
+    width: 100%;
+    font-size: 29.5px;
+  }
+}
 
 @media only screen and (min-width: 480px) {
   .todo-list {
