@@ -4,6 +4,7 @@
   padding: 2rem;
   text-align: center;
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 .todo-list {
