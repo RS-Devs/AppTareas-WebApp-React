@@ -299,6 +299,9 @@ h2 {
   input[type="text"] {
     width: 50%;
   }
+  input[type="text"]:focus-visible {
+    width: 60%;
+  }
 
   .tit {
     width: 100%;
@@ -358,9 +361,7 @@ h2 {
     width: 75%;
   }
 
-  input[type="text"]:focus-visible {
-    width: 60%;
-  }
+  
 
   .delete-all {
     height: 4rem;
