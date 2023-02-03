@@ -225,11 +225,6 @@ h2 {
   margin-top: 0.5rem;
 }
 
-
-
-
-
-
 .checkbox {
   margin-bottom: 1rem;
   outline: none;
@@ -243,10 +238,6 @@ h2 {
   background-color: #000000;
   content: "✔";
 }
-
-
-
-
 
 .select-style {
   margin-bottom: 1rem;
@@ -268,7 +259,6 @@ h2 {
   background-color: #2c2c2c;
 }
 
-
 .delete-completed {
   margin-top: 3rem;
   margin-bottom: 0rem;
@@ -277,9 +267,7 @@ h2 {
 
 .delete-completed:hover {
   background-color: #ff1b1b;
-
 }
-
 
 .delete-all {
   margin-top: 1rem;
@@ -293,8 +281,7 @@ h2 {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 320px){
-
+@media only screen and (min-width: 320px) {
   #root {
     overflow-x: hidden;
   }
@@ -302,17 +289,15 @@ h2 {
   .todo-list {
     width: 75%;
     overflow-x: hidden;
-    
+    overflow-y: hidden;
   }
 
-  .filters{
+  .filters {
     overflow-x: hidden;
-
   }
 
   input[type="text"] {
     width: 50%;
-    
   }
 
   .tit {
@@ -320,17 +305,16 @@ h2 {
     font-size: 25.5px;
   }
 
-  .delete-all{
+  .delete-all {
     height: 4rem;
   }
 
-  .delete-completed{
+  .delete-completed {
     height: 4rem;
   }
-  
 }
 
-@media only screen and (max-height:740px) {
+@media only screen and (max-height: 740px) {
   .tit {
     width: 100%;
     font-size: 29.5px;
@@ -338,7 +322,7 @@ h2 {
   }
 }
 
-@media only screen and (min-height: 470px){
+@media only screen and (min-height: 470px) {
   .tit {
     width: 100%;
     font-size: 29.5px;
@@ -360,11 +344,11 @@ h2 {
     padding: 10px;
   }
 
-  .delete-all{
+  .delete-all {
     height: 4rem;
   }
 
-  .delete-completed{
+  .delete-completed {
     height: 4rem;
   }
 }
@@ -378,11 +362,11 @@ h2 {
     width: 60%;
   }
 
-  .delete-all{
+  .delete-all {
     height: 4rem;
   }
 
-  .delete-completed{
+  .delete-completed {
     height: 4rem;
   }
 }
